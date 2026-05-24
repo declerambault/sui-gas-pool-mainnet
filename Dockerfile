@@ -12,7 +12,6 @@ COPY config.yaml /config.yaml
 
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 
-RUN echo "suiprivkey1qq7apgnv7dgvznew0zh4xf0tyjjj5eeeca0kqw5fhl0w3e28wq30w4q5hyc" > /tmp/sponsor-key
 
 EXPOSE 8080 9184
 
