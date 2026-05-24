@@ -2,6 +2,7 @@ FROM rust:1.90-bullseye AS builder
 WORKDIR /build
 RUN apt-get update && apt-get install -y cmake clang git
 COPY . .
+RUN git init && git add -A && git config user.email "build@railway" && git config user.name "Railway" && git commit -m "build" || true
 RUN cargo build --release
 
 FROM debian:bullseye-slim
