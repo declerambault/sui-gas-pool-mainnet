@@ -1,0 +1,9 @@
+[build]
+dockerfile = "Dockerfile"
+context = "."
+
+[deploy]
+startCommand = "sui-gas-station --config-path /config.yaml"
+healthcheckUrl = "http://localhost:8080/"
+healthcheckInterval = 10
+healthcheckTimeout = 5
