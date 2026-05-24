@@ -1,6 +1,6 @@
 FROM rust:1.90-bullseye AS chef
 WORKDIR sui
-RUN apt-get update && apt-get install -y cmake clang
+RUN apt-get update && apt-get install -y cmake clang git
 
 FROM chef AS builder
 WORKDIR /
